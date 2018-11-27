@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>JS Lletres Repetides - Fase 1 & 4</title>
+</head>
+
+<body>
+    <p>Exercici per practicar funcionalitats bàsiques i tractar amb arrays, llistes i conèixer altres estructures.
+        L’exercici consisteix en mostrar per consola quantes vegades apareix cada lletra del teu nom i cognoms.
+        <br>
+        Fase 1
+        Crea una array amb el teu nom on cada posició correspongui a una lletra.
+        Fes un bucle que recorri l’array i mostri per consola cadascuna de les lletres.
+
+        <br>
+        Fase 4
+        Crea una array amb el teu cognom on cada posició correspongui a una lletra.
+        Passa de les dues arrays a una sola. A més, afegeix una posició amb un espai buit entre la primera i la segona.
+        És a dir, abans tenies les arrays name i surname i ara només tens una que es dirà fullName.
+
+        FullName: [‘N’, ‘A’, ‘M’, ‘E’, ‘ ‘, ‘S’, ‘U’, ‘R‘, ‘N’, ‘A’, ‘M’, ‘E’]
+        Pista: Feu servir aquesta funció (enteneu què esteu fent)
+        var myFullName = [];
+        myFullName.push(...myName);</p>
+
+
+    <script>
+        var vocal = ["a", "e", "i", "o", "u"];
+        var nombre = prompt("Cual es tu nombre");
+        var arrayNombre = nombre.split("");
+        console.log(arrayNombre);
+
+        var apellido = prompt("Cual es tu apellido");
+        var arrayApellido = apellido.split("");
+        console.log(arrayApellido);
+
+        var joinArrays = arrayNombre.concat(" ").concat(arrayApellido);
+        var fullName = joinArrays.join("");
+        console.log(fullName.toString(""));
+    </script>
+</body>
+
+</html>

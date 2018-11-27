@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>JS Lletres Repetides - Fase 3</title>
+</head>
+
+<body>
+
+    <p>Fase 3
+        Pensa una forma per emmagatzemar tant les lletres del array com el nombre de vegades que apareixen i
+        implementa’l.
+        Pista: Map</p>
+
+
+    <script>
+        var arrName = prompt("What is your name");
+        var arrName = arrName.split("");
+        var myMap = new Map();
+
+        arrName.forEach(function (letter) {
+            if (myMap.has(letter)) {
+                myMap.set(letter, myMap.get(letter) + 1)
+            } else {
+                myMap.set(letter, 1)
+            }
+        });
+
+        console.log(myMap);
+
+    </script>
+
+
+
+
+<!-- 
+var letters = ["p", "i", "l", "a", "r", "r"];
+var myMap = new Map();
+
+for(i = 0; i < letters.length; i++){
+letterFunction(letters[i]);
+}
+
+console.log(myMap);
+
+AQUI ESTAMOS CREANDO LA FUNCION 
+
+function letterFunction(letter){
+
+   if (myMap.has(letter) === false){
+       myMap.set(letter,1);
+      } else {
+      myMap.set(letter,myMap.get(letter)+1); MAP TIENE DOS VALORES KEY, AN VALUE. GUANDO HACEMOS MAP SET(KEY,VALUE), EN EL CASO DE VALUE ME INTERESA Q SUME 1 A MI VALOR, ENTONCES HAGO GET EL VALOR Y LE SUMO UNO. 
+      }
+}-->
+
+</body>
+
+</html>

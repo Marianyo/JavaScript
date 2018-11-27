@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>JS Lletres Repetides - Fase 2</title>
+</head>
+
+<body>
+
+    <p>Fase 2
+        Al bucle, si la lletra és una vocal imprimeix a la consola: ‘VOCAL’. Sinó, imprimeix: ‘CONSONTANT’.
+        Es pot fer de diferents formes:
+        Creant una nova array que contingui les vocals (A, E, I, O, U) i comprovant si cadascuna de les lletres del teu
+        nom és en aquesta array amb el mètode indexOf
+        Comprovar si cadascuna de les lletres del teu nom és igual a ‘a’, ‘e’, ‘i’, ‘o’, ‘u’ concatenant les
+        comprovacions amb ||
+
+        Extra: Si trobes un numero, mostra per pantalla: ‘Els noms de persones no contenen números!’.
+        Pista: Mira’t la funció isNaN</p>
+
+
+    <script>
+        var vocales = ["a", "e", "i", "o", "u"];
+
+        var nombre = prompt("Cual es tu nombre?");
+        nombre = nombre.split("");
+        console.log(nombre);
+
+        var last = prompt("Cual es tu apellido?");
+        var arrayLast = last.split("");
+        console.log(arrayLast);
+
+
+        function vocalConsonante(n) {
+            for (let i = 0; i < n.length; i++) {
+                if (vocales.indexOf(n[i]) != -1) {
+                    console.log(n[i] + " es vocal");
+                }
+                else if (!isNaN(n[i])) {
+                    console.log("Los nombres no tienen números");
+                }
+                else {
+                    console.log(n[i] + " es consonante");
+                }
+            }
+        }
+
+        vocalConsonante(nombre);
+        vocalConsonante(arrayLast);
+
+    </script>
+
+
+
+
+
+
+    <!--
+    ----PRUEBA USANDO includes-NO TERMINADO----
+
+    var vocal=["a","e","i","o","u"];
+
+
+    var nombre=prompt("Cual es tu nombre?");
+    var arrayNombre=nombre.split("");
+    console.log(arrayNombre);
+
+    var last=prompt("Cual es tu apellido?");
+    var arrayLast=last.split("");
+    console.log(arrayLast);
+
+
+
+    arrayFunction(arrayNombre);
+    arrayFunction(arrayLast);
+
+    function isVowel(letter){
+    return vocal.includes(letter.toLowerCase());
+    }
+
+    function arrayFunction(n){
+    for(i=0;i<n.length;i++) { console.log(n[i]); if(isVowel(n[i])){ console.log("es una vocal"); } else
+        if(!isNaN(n[i])){ alert("Los nombres no tienen números"); console.log("Los nombres no tienen números"); } else
+        { console.log("es una consonante"); } } } -->
+    
+    
+    </body> 
+    </html>
