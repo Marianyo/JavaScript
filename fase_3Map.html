@@ -56,7 +56,43 @@ function letterFunction(letter){
       } else {
       myMap.set(letter,myMap.get(letter)+1); MAP TIENE DOS VALORES KEY, AN VALUE. GUANDO HACEMOS MAP SET(KEY,VALUE), EN EL CASO DE VALUE ME INTERESA Q SUME 1 A MI VALOR, ENTONCES HAGO GET EL VALOR Y LE SUMO UNO. 
       }
-}-->
+}
+
+
+---------------------------------------------------------
+RESPUESTA TRABAJADA EN CLASE CON PILAR
+
+var letters = ["p", "i", "l", "a", "r", "r"];
+var myMap = new Map();
+
+
+for(i = 0; i < letters.length; i++){
+letterFunction(letters[i]);
+}
+
+
+console.log(myMap);
+
+
+function letterFunction(letter){
+
+   if (myMap.has(letter) === false){
+       myMap.set(letter,1);
+      } else {
+      myMap.set(letter,myMap.get(letter)+1) ;
+      }
+}
+
+------------------------------------------------------------
+
+
+
+
+
+
+
+
+-->
 
 </body>
 

@@ -39,6 +39,10 @@
         var arrayApellido = apellido.split("");
         console.log(arrayApellido);
 
+        arrayNombre.forEach(function (el) {
+            console.log(el);
+        });
+
         var joinArrays = arrayNombre.concat(" ").concat(arrayApellido);
         var fullName = joinArrays.join("");
         console.log(fullName.toString(""));

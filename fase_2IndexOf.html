@@ -28,14 +28,38 @@
 
         var nombre = prompt("Cual es tu nombre?");
         nombre = nombre.split("");
-        console.log(nombre);
-
+        
         var last = prompt("Cual es tu apellido?");
         var arrayLast = last.split("");
-        console.log(arrayLast);
-
+        
 
         function vocalConsonante(n) {
+            for (let i = 0; i < n.length; i++) {
+               ifVocalConsonante(n[i]);
+            }
+        }
+
+        function ifVocalConsonante(n) {
+            if (vocales.indexOf(n) != -1) {
+                console.log(n + " es vocal");
+            }
+            else if (!isNaN(n)) {
+                console.log("Los nombres no tienen números");
+            }
+            else {
+                console.log(n + " es consonante");
+            }
+        }
+
+        vocalConsonante(nombre);
+        vocalConsonante(arrayLast);
+
+
+
+
+
+
+/*function vocalConsonante(n) {
             for (let i = 0; i < n.length; i++) {
                 if (vocales.indexOf(n[i]) != -1) {
                     console.log(n[i] + " es vocal");
@@ -47,10 +71,8 @@
                     console.log(n[i] + " es consonante");
                 }
             }
-        }
+        }*/
 
-        vocalConsonante(nombre);
-        vocalConsonante(arrayLast);
 
     </script>
 
@@ -86,7 +108,8 @@
     for(i=0;i<n.length;i++) { console.log(n[i]); if(isVowel(n[i])){ console.log("es una vocal"); } else
         if(!isNaN(n[i])){ alert("Los nombres no tienen números"); console.log("Los nombres no tienen números"); } else
         { console.log("es una consonante"); } } } -->
-    
-    
-    </body> 
-    </html>
+
+
+</body>
+
+</html>
